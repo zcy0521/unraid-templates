@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+    <Beta>False</Beta>
+    <Name>mysql</Name>
+    <Repository>mysql:latest</Repository>
+    <Registry>https://hub.docker.com/_/mysql</Registry>
+    <Network>bridge</Network>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <PostArgs>--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci</PostArgs>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>3306</HostPort>
+                <ContainerPort>3306</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/mysql/datadir</HostDir>
+            <ContainerDir>/var/lib/mysql</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Name>MYSQL_ROOT_PASSWORD</Name>
+            <Value>123456</Value>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Name>MYSQL_ROOT_HOST</Name>
+            <Value>%</Value>
+            <Mode/>
+        </Variable>
+    </Environment>
+</Container>
