@@ -11,12 +11,12 @@
         <Mode>bridge</Mode>
         <Publish>
             <Port>
-                <HostPort>8080</HostPort>
+                <HostPort>80</HostPort>
                 <ContainerPort>80</ContainerPort>
                 <Protocol>tcp</Protocol>
             </Port>
             <Port>
-                <HostPort>8443</HostPort>
+                <HostPort>443</HostPort>
                 <ContainerPort>443</ContainerPort>
                 <Protocol>tcp</Protocol>
             </Port>
@@ -36,16 +36,6 @@
         <Volume>
             <HostDir>/mnt/user/appdata/nginx/html</HostDir>
             <ContainerDir>/usr/share/nginx/html</ContainerDir>
-            <Mode>ro</Mode>
-        </Volume>
-        <Volume>
-            <HostDir>/mnt/user/appdata/nginx/images</HostDir>
-            <ContainerDir>/usr/share/nginx/images</ContainerDir>
-            <Mode>ro</Mode>
-        </Volume>
-        <Volume>
-            <HostDir>/mnt/user/appdata/nginx/media</HostDir>
-            <ContainerDir>/usr/share/nginx/media</ContainerDir>
             <Mode>ro</Mode>
         </Volume>
     </Data>
