@@ -21,7 +21,7 @@
         <Volume>
             <HostDir>/mnt/user/appdata/mysql/my.cnf</HostDir>
             <ContainerDir>/etc/mysql/my.cnf</ContainerDir>
-            <Mode>ro</Mode>
+            <Mode>rw</Mode>
         </Volume>
         <Volume>
             <HostDir>/mnt/user/appdata/mysql/datadir</HostDir>
