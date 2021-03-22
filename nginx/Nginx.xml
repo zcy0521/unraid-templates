@@ -24,7 +24,7 @@
     </Networking>
     <Data>
         <Volume>
-            <HostDir>/mnt/user/appdata/nginx/nginx.conf</HostDir>
+            <HostDir>/mnt/user/appdata/nginx/conf/nginx.conf</HostDir>
             <ContainerDir>/etc/nginx/nginx.conf</ContainerDir>
             <Mode>ro</Mode>
         </Volume>
